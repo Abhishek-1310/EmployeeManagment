@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="14" failures="0" errors="0" time="2.063">
+  <testsuite name="EmployeeController" errors="0" failures="0" skipped="0" timestamp="2024-03-08T11:44:59" time="1.914" tests="14">
+    <testcase classname="EmployeeController create should create employee data" name="EmployeeController create should create employee data" time="0.002">
+    </testcase>
+    <testcase classname="EmployeeController create should handle error when create employee data" name="EmployeeController create should handle error when create employee data" time="0.001">
+    </testcase>
+    <testcase classname="EmployeeController getAllItem should return all employee data when data is avialable" name="EmployeeController getAllItem should return all employee data when data is avialable" time="0.001">
+    </testcase>
+    <testcase classname="EmployeeController getAllItem should handle empty items when getting employee data" name="EmployeeController getAllItem should handle empty items when getting employee data" time="0.001">
+    </testcase>
+    <testcase classname="EmployeeController getAllItem should handle error when getting employees data" name="EmployeeController getAllItem should handle error when getting employees data" time="0.005">
+    </testcase>
+    <testcase classname="EmployeeController getItem should get employee data" name="EmployeeController getItem should get employee data" time="0.001">
+    </testcase>
+    <testcase classname="EmployeeController getItem should handle not found error when getting employee data" name="EmployeeController getItem should handle not found error when getting employee data" time="0.001">
+    </testcase>
+    <testcase classname="EmployeeController getItem should handle error when getting employee data" name="EmployeeController getItem should handle error when getting employee data" time="0">
+    </testcase>
+    <testcase classname="EmployeeController updateItem should update employee data" name="EmployeeController updateItem should update employee data" time="0">
+    </testcase>
+    <testcase classname="EmployeeController updateItem should handle not found error when updating employee data" name="EmployeeController updateItem should handle not found error when updating employee data" time="0">
+    </testcase>
+    <testcase classname="EmployeeController updateItem should handle erros when when updating employee data" name="EmployeeController updateItem should handle erros when when updating employee data" time="0.001">
+    </testcase>
+    <testcase classname="EmployeeController deleteItem should delete employee data" name="EmployeeController deleteItem should delete employee data" time="0">
+    </testcase>
+    <testcase classname="EmployeeController deleteItem should handle not found error when deleting employee data" name="EmployeeController deleteItem should handle not found error when deleting employee data" time="0">
+    </testcase>
+    <testcase classname="EmployeeController deleteItem should handle error when deleting employee data" name="EmployeeController deleteItem should handle error when deleting employee data" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>

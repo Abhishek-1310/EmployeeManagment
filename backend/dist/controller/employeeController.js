@@ -1,0 +1,112 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmployeeController = void 0;
+class EmployeeController {
+    employeeService;
+    constructor(employeeService) {
+        this.employeeService = employeeService;
+    }
+    async create(data) {
+        try {
+            const createdEmployee = await this.employeeService.createEmployee(data);
+            return {
+                statusCode: 201,
+                body: createdEmployee,
+                message: 'Employee Data Created succesfully',
+            };
+        }
+        catch (error) {
+            console.error(error);
+            return {
+                statusCode: 500,
+                body: { error: 'Internal server error!' },
+                message: 'Employee Data not created',
+            };
+        }
+    }
+    ;
+    async getItem(id) {
+        try {
+            const item = await this.employeeService.getEmployeeById(id);
+            if (item) {
+                return {
+                    statusCode: 200,
+                    body: item,
+                    message: 'Employee Data getting succesfully',
+                };
+            }
+            else {
+                return {
+                    statusCode: 404,
+                    body: { error: 'Item Not Found' },
+                    message: 'Employee Data not getting ',
+                };
+            }
+        }
+        catch (error) {
+            console.log(error);
+            return {
+                statusCode: 500,
+                body: { error: 'internal server error' },
+                message: 'Employee Data not getting',
+            };
+        }
+    }
+    ;
+    async updateItem(data) {
+        try {
+            // const id = req.params.id;
+            const updatedItem = await this.employeeService.updateEmployee(data);
+            if (updatedItem) {
+                return {
+                    statusCode: 200,
+                    body: updatedItem,
+                    message: 'Employee Data updated succesfully',
+                };
+            }
+            else {
+                return {
+                    statusCode: 404,
+                    body: { error: 'item not found' },
+                    message: 'Employee Data not found ',
+                };
+            }
+        }
+        catch (error) {
+            return {
+                statusCode: 500,
+                body: { error: 'internal server error' },
+                message: 'Employee Data not getting',
+            };
+        }
+    }
+    async deleteItem(id) {
+        try {
+            const deleteItem = await this.employeeService.deleteEmployee(id);
+            if (deleteItem) {
+                return {
+                    statusCode: 200,
+                    body: { message: 'Item Deleted successfully' },
+                    message: 'Employee Data delte succesfully',
+                };
+            }
+            else {
+                return {
+                    statusCode: 404,
+                    body: { error: 'Item not found' },
+                    message: 'Employee Data not getting',
+                };
+            }
+        }
+        catch (error) {
+            console.error(error);
+            return {
+                statusCode: 500,
+                body: { error: 'internal server error' },
+                message: 'Employee Data not getting',
+            };
+        }
+    }
+}
+exports.EmployeeController = EmployeeController;
+//# sourceMappingURL=employeeController.js.map
